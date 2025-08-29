@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f3eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    border: none;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.cell:nth-child(-n+3) {
+    border-top: none;
+}
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+.cell:nth-child(3n) {
+    border-right: none;
+}
+.cell:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+#reset-btn, #new-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background: orange;
+    color: black;
+}
+
+#msg {
+    color: darkgreen;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.msg-container {
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
